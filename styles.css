@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #FFF;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+nav {
+    background-color: black;
+    top: -1px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+}
+
+.espacio {
+    width: 100%;
+    height: 90px;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 80px;
+    z-index: 100;
+}
+
+.container-logo {
+    margin-left: 20px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.container-logo h2 {
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.container-logo h2 span {
+    color: aqua;
+    font-weight: 700;
+}
+
+.links .link {
+    display: inline-block;
+}
+
+.links .link a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 25px;
+    letter-spacing: 3px;
+    transition: .7s;
+}
+
+.links .link a:hover {
+    color: rgb(78, 233, 233);
+}
+
+.toggle {
+    margin-right: 30px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .5s;
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+    .toggle {
+        display: inline-block;
+    }
+
+    .links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: rgb(51, 51, 51);
+        text-align: center;
+        overflow: hidden;
+        height: calc(100vh - 80px);
+        width: 100%;
+        z-index: -1;
+        top: -100vh;
+        transition: .7s;
+    }
+
+    .active {
+        top: 80px;
+    }
+
+    .links .link:hover {
+        background: rgb(153, 153, 153);
+        color: black;
+        cursor: pointer;
+    }
+}
+
+.home {
+    width: 100%;
+    padding: 10% 0;
+    margin-top: 80px;
+}
+
+.titulo h1 {
+    font-size: 80px;
+    margin-left: 80px;
+}
+
+.me {
+    margin: 100px 80px;
+}
+
+.me .name {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.me .frontend {
+    font-weight: 10;
+    font-size: 25px;
+}
+
+.aboutme {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+
+.container-aboutme .titulo h1 {
+    font-size: 50px;
+    margin-top: 100px;
+
+}
+
+.container-aboutme .myinfo .name {
+    margin-left: 80px;
+    margin-top: 70px;
+    font-size: 28px;
+}
+
+.container-aboutme .info {
+    width: 60%;
+    margin-left: 90px;
+    margin-top: 50px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.container-aboutme .info .infome {
+    font-size: 16px;
+}
+
+.myphoto {
+    margin-right: 80px;
+}
+
+.myphoto img {
+    width: 400px;
+    height: 500px;
+    border-radius: 57% 43% 70% 30% / 57% 47% 53% 43%;
+    object-fit: cover;
+}
+
+.experience {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(58, 58, 58);
+    margin-bottom: 20px;
+}
+
+.container-experience {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-eduexp h1 {
+    margin: 20px;
+    font-size: 50px;
+    margin-left: 80px;
+}
+
+.education {
+    margin-left: 80px;
+    width: 100%;
+    margin-right: 80px;
+}
+
+.title-education {
+    font-size: 21px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.trabajo {
+    margin-bottom: 50px;
+}
+
+.titulo-trabajo {
+    font-size: 18px;
+}
+
+.descripcion {
+    font-size: 15px;
+}
+
+.title-experience {
+    font-size: 21px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.experiences {
+    width: 100%;
+    margin-right: 80px;
+}
+
+.programas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.title-programs h1 {
+    font-size: 40px;
+}
+
+h1 span {
+    color: aqua;
+}
+
+.container-programa {
+    margin-top: 50px;
+    display: flex;
+    height: 200px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.programa i {
+    font-size: 60px;
+    justify-content: space-around;
+}
+
+.programa i:hover {
+    font-size: 65px;
+}
+
+.programa p {
+    margin-top: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.programa {
+    text-align: center;
+    margin: 5px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10% 0;
+    background-color: rgb(58, 58, 58);
+}
+
+.title-projects h1 {
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.card img {
+    transition: 1s;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.card:hover img {
+    opacity: 0.3;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    display: flex;
+    width: 240px;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    font-weight: bold;
+    margin-top: -40px;
+}
+
+.card:hover .texto {
+    visibility: visible;
+    font-size: 20px;
+    margin-top: -80px;
+    transition: 2s;
+}
+
+.card:hover .projectbtn {
+    visibility: visible;
+    background-color: aqua;
+    font-size: 18px;
+    width: 120px;
+    margin-top: 150px;
+    transition: 2s;
+}
+
+.projectbtn {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    margin-top: 100px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black;
+    visibility: hidden;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+footer h2 {
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-btn {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background: rgb(59, 59, 59);
+    box-shadow: 1px 1px 10px rgb(201, 201, 201);
+    color: #333;
+    margin: 5px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.social-btn a {
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    width: 180px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.social-btn span {
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+}
+
+.social-btn:hover span {
+    padding: 2px;
+    width: max-content;
+}
+
+.home {
+    background-color: rgb(58, 58, 58);
+}
+
+h4 span {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(172, 172, 172);
+}
+
+.portfolio {
+    height: 1.4em;
+    padding: 0 14px 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.portfolio:before {
+    content: '|';
+    width: 1px;
+    top: 5px;
+    bottom: 5px;
+    right: 7px;
+    position: absolute;
+    animation: blinkAnim 500ms linear infinite;
+}
+
+@keyframes blinkAnim {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Smartphone Screen */
+@media screen and (max-width: 767px) {
+
+    body {
+        width: 100%;
+    }
+
+    .home {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        margin-left: 10px;
+        font-size: 60px;
+    }
+
+    .aboutme {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .container-aboutme {
+        justify-content: center;
+    }
+
+    .myphoto {
+        position: absolute;
+        z-index: -1;
+        filter: grayscale(30%);
+        opacity: 0.7;
+        margin-top: -70px;
+        margin-right: 0;
+    }
+
+    .me {
+        margin: 0;
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+
+    .me .name,
+    .me .frontend {
+        font-size: 18px;
+    }
+
+    .myinfo {
+        width: 90%;
+        text-align: center;
+    }
+
+    .container-aboutme {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-aboutme .titulo {
+        margin-left: -250px;
+    }
+
+    .container-aboutme .myinfo .name {
+        margin-left: 10px;
+        margin-top: 200px;
+        font-size: 28px;
+    }
+
+    .container-aboutme .info {
+        width: 60%;
+        margin-left: 20px;
+        margin-top: 50px;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aboutme .info .infome {
+        font-size: 16px;
+    }
+
+    .container-experience .title-eduexp h1 {
+        font-size: 60px;
+        margin-left: 10px;
+    }
+
+    .title-eduexp h1 {
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .title-eduexp {
+        text-align: center;
+    }
+
+    .education {
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .experiences {
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .title-experience {
+        font-size: 18px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .titulo-trabajo {
+        font-size: 15px;
+    }
+
+    .trabajo {
+        margin-bottom: 30px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+
+    .container-experience {
+        flex-direction: column;
+    }
+
+    .title-education {
+        font-size: 18px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .title-programs {
+        text-align: center;
+    }
+
+    .projects {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-projects {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .title-projects h1 {
+        margin: 0;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .espacio {
+        height: 40px;
+    }
+
+    .cards {
+        height: 240px;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .container-programa {
+        height: max-content;
+    }
+
+}
